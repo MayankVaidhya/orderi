@@ -9,7 +9,7 @@ import orderRouter from "./routes/orderRoute.js";
 
 // app config
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 // middleware
 app.use(express.json());
@@ -32,5 +32,3 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
-
-// mongodb+srv://foode:foode@cluster0.v1lupzy.mongodb.net/?
